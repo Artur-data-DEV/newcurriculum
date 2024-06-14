@@ -1,13 +1,26 @@
 "use client";
-import { ToastContainer, toast } from "react-toastify";
+import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
+const fakeData = new Promise((resolve) => setTimeout(() => resolve(), 7000));
 
 const Toast = ({ props, children }) => {
   const notify = () =>
-    toast(
-      "Thank you for supporting my career and for giving me an opportunity to introduce myself!"
-    );
+    toast.promise(fakeData, {
+      pending: {
+        render: () => "Loading...",
+        icon: "🟢",
+      },
+      success: {
+        render: () => "Curriculum Downloaded!",
+        icon: "🟢",
+      },
+      error: {
+        render: () => "Oops... something was gone wrong...",
+        icon: "🔴",
+      },
+      animate: Bounce,
+    });
 
   return (
     <>
@@ -18,10 +31,11 @@ const Toast = ({ props, children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.9 }}
+        className="text-white"
       >
         {children}
+        <ToastContainer position="top-left" />
       </motion.button>
-      <ToastContainer />
     </>
   );
 };

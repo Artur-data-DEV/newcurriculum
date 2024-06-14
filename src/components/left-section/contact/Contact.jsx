@@ -4,12 +4,13 @@ import { links } from "@/data/linksData";
 import ContactItem from "@/components/left-section/contact/ContactItem";
 
 const Contact = () => (
-  <div className="contact-info px-1">
+  <div className="text-md">
+    <hr className="mx-10"/>
     <motion.h2
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.1 }}
-      className="text-xl text-slate-200"
+      className="text-xl text-white py-6 text-center"
     >
       Contact Information
     </motion.h2>
@@ -17,6 +18,7 @@ const Contact = () => (
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8 }}
+      className={"space-y-6"}
     >
       {/* Map through the links array */}
       {links.map((link, index) => (

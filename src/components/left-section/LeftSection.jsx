@@ -7,7 +7,7 @@ import Skills from "@/components/left-section/skills/Skills";
 const LeftSection = () => {
   return (
     <motion.section
-      className="left-section"
+      className="col-span-4 h-full bg-purple-900 border-4 border-white overflow-hidden"
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}

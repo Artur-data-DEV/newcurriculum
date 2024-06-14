@@ -37,74 +37,13 @@
   }
   .resume-contents {
     min-height: 100vh;
-    width: 85%;
+    width: 100%;
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
   }
 
-  .left-section {
-    grid-column: span 4;
-    height: 100%;
-    background-color: #3a1e4b96;
-    border: 4px solid;
-    border-color: white;
-    max-width: 500px; /* Set the maximum width as needed */
-    overflow: auto
-  }
-
-  .right-section {
-    grid-column: span 6;
-    height: 100%;
-    background-color: #d6dbdf;
-    border: 4px solid;
-    border-color: white;
-  }
-
-  .left-section-contents {
-    max-width: 100%; /* Allow the content to take up to 100% of the parent's width */
-    box-sizing: border-box; 
-  }
-
-  .profile {
-    width: 100%;
-    border-bottom: 2px solid #1b2631;
-    justify-content: center; /* Align items horizontally to center */
-    text-align: center; /* Center text */
-    align-self: center; 
-    display: flex-block;/* Align flex item vertically to center */
-  } 
-
-  .profile .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 10px solid rgba(76, 217, 233, 0.912);
-    justify-content: center; /* Align items horizontally to center */
-    text-align: center; /* Center text */
-    align-self: center; 
-  }
-
-
-  .left-title {
-    color: #d6dbdf;
-    font-size: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding-top: 3rem;
-    margin-bottom: 1rem;
-  }
-
-
-
-
-  .right-section-contents {
-    padding: 2rem 2rem;
-  }
-
+ 
   .right-title {
     color: rgb(51, 51, 146);
     font-family: "Courier New", Courier, monospace;
@@ -116,32 +55,7 @@
     text-align: left;
   }
 
-  .about-me-contents {
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 2rem;
-    color: black;
-  }
 
-  .experience-contents,
-  .education-contents,
-  .awards-contents {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 2rem;
-    color: black;
-  }
-
-  .exp-company-name,
-  .education-school-name,
-  .awards-company-name {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: rgba(10, 2, 65, 0.734);
-    padding-bottom: 0.4rem;
-  }
 
   .exp-type {
     font-style: italic;
@@ -157,15 +71,6 @@
     margin-top: 0.4rem;
   }
 
-  .exp-time-period,
-  .educationp-time-period,
-  .awards-time-period {
-    letter-spacing: 1px;
-    line-height: 2rem;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
 
   .exp-position,
   .education-subject,
@@ -194,95 +99,10 @@
     padding-left: 5px;
   }
 
-  .name {
-    font-size: 20px;
-  }
-
   /* Media queries */
-
-  @media screen and (max-width: 780px) {
-    .experience-contents,
-    .education-contents,
-    .awards-contents {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .left-section {
-      grid-column: span 3;
-    }
-
-    .right-section {
-      grid-column: span 4;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    .resume-contents {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  @media screen and (max-width: 390px) {
-    .resume-contents {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .name {
-      font-size: 12px;
-    }
-
-    .profession {
-      font-size: 18px;
-    }
-
-    .left-title {
-      font-size: 18px;
-    }
-
-    .right-title {
-      font-size: 18px;
-    }
-
-    .contact-info ul li,
-    .references ul li {
-      font-size: 12px;
-    }
-
-    .contact-info ul li i,
-    .references ul li i {
-      /* padding-right: 1rem; */
-      font-size: 12px;
-    }
-
-    .skills ul li p {
-      font-size: 12px;
-    }
-
-    .about-me-contents {
-      font-size: 16px;
-      line-height: 1.5rem;
-    }
-
-    .exp-company-name,
-    .education-school-name,
-    .awards-company-name {
-      font-size: 18px;
-    }
-
-    .exp-time-period,
-    .educationp-time-period,
-    .awards-time-period {
-      font-size: 16px;
-    }
-
-    .exp-position,
-    .education-subject,
-    .awards-name {
-      font-size: 18px;
-    }
-  }
 }
+
+
 
 @layer utilities {
   .text-balance {

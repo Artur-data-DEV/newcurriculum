@@ -3,28 +3,30 @@ import SkillIcon from "@/components/left-section/skills/SkillIcon";
 
 const SkillItems = ({ title, delay, skills }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: delay }}
-      className="flex flex-col"
-    >
-      <div>
-        <h4>{title}</h4>
-        <div className="flex-row flex">
-          {skills.map((skill, index) => (
-            <SkillIcon
-              key={index}
-              icon={skill.icon}
-              alt={skill.alt}
-              title={skill.title}
-              width={skill.width}
-              height={skill.height}
-            />
-          ))}
+    <>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: delay }}
+        className="flex flex-col mx-5 my-12 pt-10 border-solid border-t-2 border-white"
+      >
+        <div >
+          <h4 className="text-xl font-bold mb-4 ">{title}</h4>
+          <div className="grid grid-cols-4">
+            {skills.map((skill, index) => (
+              <SkillIcon
+                key={index}
+                icon={skill.icon}
+                alt={skill.alt}
+                title={skill.title}
+                width={skill.width}
+                height={skill.height}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
