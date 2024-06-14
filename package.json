@@ -1,0 +1,26 @@
+{
+  "name": "newcurriculum",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^3.4.4",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^11.2.10",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-to-pdf": "^1.0.1",
+    "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
