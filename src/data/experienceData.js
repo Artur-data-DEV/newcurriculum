@@ -1,8 +1,35 @@
 export const experienceData = [
   {
+    companyName: "Global Hitss",
+    location: "Asa Norte, Brasília - DF",
+    timePeriod: "Jul 2024 - Present",
+    position: "Data Monitoring Analyst",
+    type: "Full-time",
+    description:
+      "Maintaining data quality, monitoring reporting systems, providing continuous feedback and support for ongoing changes. Communicating data quality improvements with teams and clients, participating in planning and review sessions for data cleanups and analysis. Experienced in maintaining end-user training modules, supporting monthly training sessions on advanced SQL and the system Data Model, and monitoring upstream applications for table changes to ensure data integrity.",
+  },
+  {
+    companyName: "Algar Telecom",
+    location: "Uberlândia, Minas Gerais - MG (Remoto)",
+    timePeriod: "Jul 2022 - Apr 2023",
+    position: "Technology Analyst II - Full Stack Developer",
+    type: "Full-time",
+    description:
+      "Frontend Development Specialist specializing in Gatsby and React, with extensive experience in agile methodologies. Currently engaged in the redesign of multiple pages on the Algar Telecom website, focusing on enhancing user experience and optimizing performance. Proficient in remote collaboration tools, ensuring efficient and productive teamwork despite geographical distances. Experienced in delivering high-quality frontend solutions tailored to meet project requirements and exceed client expectations.",
+  },
+  {
+    companyName: "BRB Banco de Brasília (Sede)",
+    location: "Asa Norte, Brasília - DF",
+    timePeriod: "Mar 2022 - Jul 2022",
+    position: "Information Security Analyst",
+    type: "Intern",
+    description:
+      " Development of international solutions for replacing software written in outdated language and refactored with NextJs using nodemailer, React, ChackraUI and internal authentication with LDAP/ Development of internal applications for automation of manual and analogue processes.",
+  },
+  {
     companyName: "Cartório Colorado",
-    location: "Brasília, Distrito Federal",
-    timePeriod: "Oct 2021 - Present",
+    location: "Sobradinho, Brasília - DF",
+    timePeriod: "Oct 2021 - Mar 2022",
     position: "Javascript Backend Developer",
     type: "Trainee",
     description:
@@ -10,16 +37,16 @@ export const experienceData = [
   },
   {
     companyName: "EBSERH",
-    location: "Brasília, Distrito Federal",
+    location: "Asa Sul, Brasília - DF",
     timePeriod: "Nov 2020 - Oct 2021",
-    position: "Infrastructure technician",
+    position: "Infrastructure Technician",
     type: "Intern",
     description:
       "I worked in the IT governance area, participating in large projects of inventory mapping, infrastructure analytics dashboards, infrastructure support and customer service, mind maps with miMind, IT inventory visualization with Power BI, visual design of organizational architecture of IT with Figma and monitoring of availability indicators with Zabbix.",
   },
   {
     companyName: "Stefanini IT Solutions",
-    location: "Brasília, Distrito Federal",
+    location: "Asa Sul, Brasília - DF",
     timePeriod: "Jul 2019 - Nov 2020",
     position: "Jr Quality Analyst (QA)",
     type: "Full-time",
@@ -27,8 +54,8 @@ export const experienceData = [
       "I worked in the Quality and Assurance area focused on routine monitoring in the Service Desk environment. Conducting monitoring, feedback, calibrations, TQC's (Total Quality Control) working in the area of people development and asset management, call management, compliance and monitoring the continuous improvement of contracts in which I worked.",
   },
   {
-    companyName: "UnB - Campus Ceilândia",
-    location: "Ceilândia, Distrito Federal",
+    companyName: "UnB - Universidade de Brasília",
+    location: "Ceilândia, Brasília - DF",
     timePeriod: "Aug 2018 - Jul 2019",
     position: "IT Technical Support",
     type: "Intern",
@@ -37,7 +64,7 @@ export const experienceData = [
   },
   {
     companyName: "Hospital Santa Marta",
-    location: "Taguatinga Sul, Distrito Federal",
+    location: "Taguatinga Sul, Brasília - DF",
     timePeriod: "Dec 2016 - Aug 2018",
     position: "Purchasing Apprentice",
     type: "Apprentice",

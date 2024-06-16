@@ -35,72 +35,7 @@
   body {
     background-color: rgb(6, 27, 67);
   }
-  .resume-contents {
-    min-height: 100vh;
-    width: 100%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-  }
-
- 
-  .right-title {
-    color: rgb(51, 51, 146);
-    font-family: "Courier New", Courier, monospace;
-    font-size: 32px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: bold;
-    align-items: center;
-    text-align: left;
-  }
-
-
-
-  .exp-type {
-    font-style: italic;
-    font-size: 20px;
-    color: red;
-    margin: -5px 0.4rem 0.4rem 0.4rem;
-    text-shadow: 0.5px 0.5px black;
-  }
-
-  .exp-place {
-    font-style: italic;
-    font-size: 14px;
-    margin-top: 0.4rem;
-  }
-
-
-  .exp-position,
-  .education-subject,
-  .awards-name {
-    color: rgb(140, 42, 220);
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    padding-bottom: 1rem;
-    text-shadow: 1px 0.5px 0.5px black;
-  }
-
-  .awards-right p a {
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  .exp-desc,
-  .education-desc,
-  .awards-desc {
-    font-size: 16px;
-    letter-spacing: 1px;
-    line-height: 1.5rem;
-    border-left: 3px solid #a5a3a3;
-    padding-left: 5px;
-  }
-
-  /* Media queries */
-}
+ }
 
 
 

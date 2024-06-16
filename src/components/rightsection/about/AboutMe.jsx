@@ -3,7 +3,7 @@ import { aboutMeData } from "@/data/aboutMeData";
 
 const AboutMe = () => {
   return (
-    <section className="space-y-2 mt-8">
+    <section className="space-y-2">
       <motion.h1
         className="text-blue-900 font-mono text-4xl uppercase font-semibold tracking-wide pl-3"
         initial={{ opacity: 0 }}
@@ -14,13 +14,13 @@ const AboutMe = () => {
       </motion.h1>
       <div>
         {aboutMeData.map((content, index) => (
-          <div className={"py-1"}>
+          <div>
             <motion.p
               key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2, delay: 0.7 }}
-              className="text-black text-justify gap-10 px-5"
+              className="text-black text-justify p-5"
             >
               {content.text}
             </motion.p>

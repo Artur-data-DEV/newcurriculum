@@ -1,4 +1,4 @@
-import ExperienceItem from "@/components/right-section/Experience/ExperienceItem";
+import ExperienceItem from "@/components/rightsection/experience/ExperienceItem.jsx";
 import { experienceData } from "@/data/experienceData";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ const Experience = () => {
         Experience
       </motion.h1>
       {experienceData.map((experience, index) => (
-        <div key={index} className={"p-5"}>
+        <div key={index} >
           <ExperienceItem
             companyName={experience.companyName}
             location={experience.location}

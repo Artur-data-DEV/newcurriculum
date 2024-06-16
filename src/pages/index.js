@@ -1,13 +1,15 @@
-import LeftSection from "@/components/left-section/LeftSection";
-import RightSection from "@/components/right-section/RightSection";
-import Toast from "@/components/left-section/contact/Toast";
+import LeftSection from "@/components/leftsection/LeftSection";
+import RightSection from "@/components/rightsection/RightSection";
+import Toast from "@/components/leftsection/contact/Toast";
 import { motion } from "framer-motion";
 import { usePDF } from "react-to-pdf";
 import { useState, useRef } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import useToastNotification from "@/components/leftsection/hooks/useToastNotification";
 
 export default function Resume() {
   const [isLoading, setIsLoading] = useState(false);
+  const { notifySuccess, notifyError } = useToastNotification();
   const leftSectionRef = useRef(null);
   const rightSectionRef = useRef(null);
 
@@ -16,72 +18,58 @@ export default function Resume() {
     page: { margin: 3 },
   });
 
-  const downloadResume = async () => {
+  const downloadResume = () => {
     setIsLoading(true);
-    console.log(leftSectionRef, rightSectionRef);
 
-    const originalColors = {
-      leftBg: leftSectionRef.current?.style.backgroundColor,
-      rightBg: rightSectionRef.current?.style.backgroundColor,
-      leftColor: leftSectionRef.current?.style.color,
-      rightColor: rightSectionRef.current?.style.color,
-    };
-
-    if (leftSectionRef.current && rightSectionRef.current) {
-      leftSectionRef.current.style.backgroundColor = "white";
-      rightSectionRef.current.style.backgroundColor = "white";
-      leftSectionRef.current.style.color = "black";
-      rightSectionRef.current.style.color = "black";
+    try {
+      toPDF();
+      setIsLoading(false);
+      notifySuccess("Curriculum Downloaded!");
+    } catch (error) {
+      setIsLoading(false);
+      notifyError("Failed to generate PDF. " + error);
     }
-    toPDF();
-    if (leftSectionRef.current && rightSectionRef.current) {
-      leftSectionRef.current.style.backgroundColor = originalColors.leftBg;
-      rightSectionRef.current.style.backgroundColor = originalColors.rightBg;
-      leftSectionRef.current.style.color = originalColors.leftColor;
-      rightSectionRef.current.style.color = originalColors.rightColor;
-    }
-    setIsLoading(false);
   };
+
   return (
     <div className="w-[30cm] h-full m-auto">
-      <div
-        className={`${
-          isLoading && "left-14"
-        } fixed left-3 bottom-5 opacity-75 hover:opacity-100`}
-      >
+      <div className="sm:fixed z-50 sm:bottom-5 sm:left-3 top-5 sticky bottom-0 left-0 ">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="bg-red-500 p-3 rounded-full cursor-pointer relative"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="bg-red-500/90 hover:bg-red-500 py-3 rounded-full cursor-pointer relative w-44 text-center"
           onClick={downloadResume}
         >
-          {isLoading && (
+          {isLoading ? (
             <motion.div
               className="flex items-center justify-center"
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity }}
-              style={{ width: "100%", height: "100%" }}
             >
-              <AiOutlineLoading3Quarters />
+              <AiOutlineLoading3Quarters size={32} />
             </motion.div>
+          ) : (
+            <span>Download Curriculum</span>
           )}
-          <Toast>Download Curriculum</Toast>
         </motion.div>
       </div>
+
       <motion.main
-        className="resume-contents"
+        className="min-h-screen w-full my-8 mx-auto grid grid-cols-12"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         ref={targetRef}
       >
-        <LeftSection ref={leftSectionRef} />
-        <RightSection ref={rightSectionRef} />
+        <LeftSection
+          ref={leftSectionRef}
+          className={"bg-slate-500 text-white"}
+        />
+        <RightSection ref={rightSectionRef} className={"bg-white"} />
       </motion.main>
+      <Toast />
     </div>
   );
 }

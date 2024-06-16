@@ -5,32 +5,28 @@ import { motion } from "framer-motion";
 const Awards = () => {
   return (
     <motion.section
-      className="text-center"
+      className="text-left pb-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.5 }}
     >
-      <div className="text-3xl font-bold text-purple-700 mb-6">
-        Certificates
-      </div>
+      <h1 className="text-3xl font-semibold text-purple-700 text-left p-5">
+        CERTIFICATES
+      </h1>
       {certificateItems.map((item, index) => (
         <motion.div
           key={index}
-          className="grid grid-cols-2 gap-4 border-b-2 border-gray-200 py-4"
+          className="grid grid-cols-2 gap-y-2 border-b-2 border-gray-200 py-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          <div className="text-left">
-            <p className="text-lg font-bold text-purple-700 mb-2">
-              {item.companyName}
-            </p>
+          <div className="flex flex-col justify-center px-4">
+            <p className="text-lg font-bold text-purple-700">{item.companyName}</p>
             <p className="text-base text-gray-600">{item.timePeriod}</p>
           </div>
-          <div className="text-left">
-            <p className="text-lg font-bold text-purple-700 mb-2">
-              {item.name}
-            </p>
+          <div className="flex flex-col justify-center px-4">
+            <p className="text-lg font-bold text-purple-700">{item.name}</p>
             <p className="text-base text-gray-600">
               <Link
                 href={item.credentialLink}

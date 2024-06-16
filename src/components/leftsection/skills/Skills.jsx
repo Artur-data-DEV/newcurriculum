@@ -1,9 +1,9 @@
-import SkillItem from "@/components/left-section/skills/SkillItem"; // Adjust the path as needed
+import SkillItem from "@/components/leftsection/skills/SkillItem.jsx"; // Adjust the path as needed
 import { skillsData } from "@/data/skillsData"; // Adjust the path as needed
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div>
       {skillsData.map((category, index) => (
         <SkillItem
           key={index}

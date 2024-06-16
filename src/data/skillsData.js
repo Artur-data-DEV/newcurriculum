@@ -1,4 +1,4 @@
-import { AiFillHtml5, AiFillGithub, AiFillGitlab } from "react-icons/ai";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 
 import { FaCss3Alt, FaNodeJs } from "react-icons/fa";
 
@@ -51,7 +51,7 @@ import {
   SiPrisma,
   SiPrettier,
   SiEslint,
-  SiJest
+  SiJest,
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 
@@ -188,12 +188,8 @@ export const skillsData = [
         title: "MySQL",
         width: 50,
       },
+      { icon: SiPrisma, alt: "PrismaORM", title: "PrismaORM", width: 50 },
     ],
-  },
-  {
-    title: "ORM's",
-    delay: 0.8,
-    skills: [{ icon: SiPrisma, alt: "Prisma", title: "Prisma", width: 50 }],
   },
   {
     title: "Data Science",
@@ -408,18 +404,14 @@ export const skillsData = [
   {
     title: "Testing",
     delay: 0.8,
-    skills: [
-     
-      { icon: SiJest, alt: "Jest", title: "Jest", width: 50 },
-    ],
+    skills: [{ icon: SiJest, alt: "Jest", title: "Jest", width: 50 }],
   },
   {
     title: "Other",
     delay: 0.8,
     skills: [
-      { icon: SiEslint, alt: "Grafana", title: "Grafana", width: 50 },
-      { icon: SiPrettier, alt: "Prometheus", title: "Prometheus", width: 50 },
+      { icon: SiEslint, alt: "ESLint", title: "ESLint", width: 50 },
+      { icon: SiPrettier, alt: "Prettier", title: "Prettier", width: 50 },
     ],
   },
-  
 ];

@@ -34,8 +34,8 @@ const Toast = ({ props, children }) => {
         className="text-white"
       >
         {children}
-        <ToastContainer position="top-left" />
       </motion.button>
+      <ToastContainer position="top-left" />
     </>
   );
 };

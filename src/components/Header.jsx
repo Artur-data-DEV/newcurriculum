@@ -9,7 +9,7 @@ const Header = () => {
       <title>Artur Campos - CV</title>
       <link
         rel="shortcut icon"
-        href="./img/icon_curriculum.png"
+        href="/favicon.ico"
         type="image/x-icon"
       />
       <link
